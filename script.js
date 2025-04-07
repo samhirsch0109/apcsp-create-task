@@ -87,7 +87,7 @@ function calculateGPA() {
         let numericGrade = convertToNumeric(grade, level);
         let credit = getCreditValue(creditType);
 
-        if (credit > 0) {  // Enhanced selection logic to prevent division by zero
+        if (credit > 0) {
             totalQualityPoints += numericGrade * credit;
             totalCredits += credit;
         }
