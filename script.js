@@ -66,7 +66,7 @@ function removeCourse(row) {
     row.remove();
 }
 
-function calculateGPA() {
+function calculateGPA(courses) {
     if (courses.length === 0) {
         alert("Please add at least one course before calculating GPA.");
         return;
@@ -125,4 +125,6 @@ function getCreditValue(creditType) {
         return 0;
     }
 }
-document.getElementById("calculate-btn").addEventListener("click", calculateGPA);
+document.getElementById("calculate-btn").addEventListener("click", function () {
+    calculateGPA(courses);
+});
